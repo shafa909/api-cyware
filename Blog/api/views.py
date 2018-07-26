@@ -26,7 +26,7 @@ class BlogPostAPIListView(mixins.CreateModelMixin,generics.ListAPIView):  #Detai
 	
 		query = self.request.GET.get("q")
 		if query is not None:
-			qs = qs.filter(Q(usename__icontains=query)|Q(email__icontains=query)).distinct()
+			qs = qs.filter(Q(username__icontains=query)|Q(email__icontains=query)).distinct()
 		return qs	
 	
 	def post(self,request,*args,**kwargs):
