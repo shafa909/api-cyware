@@ -14,7 +14,7 @@ simple rest api example
    eg : http://127.0.0.1:8000/api/?q=amir khan
   
 -API RUDView
- -http://127.0.0.1:8000/api/"<pk>"
+ -http://127.0.0.1:8000/api/"<pk or id>"
     eg :http://127.0.0.1:8000/api/2
     eg :http://127.0.0.1:8000/api/3/ 
  
