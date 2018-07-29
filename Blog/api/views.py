@@ -5,7 +5,7 @@ from Blog.models import BlogPost
 from .serializers import BlogPostSerializer
 
 
-class BlogPostAPIView(generics.CreateAPIView):  #Detail view , create view , form view
+class BlogPostAPIView(generics.CreateAPIView):  
 	lookup_field  = 'pk'  # we can use slug , id
 	serializer_class =  BlogPostSerializer
 	queryset      = BlogPost.objects.all()
@@ -14,7 +14,7 @@ class BlogPostAPIView(generics.CreateAPIView):  #Detail view , create view , for
 		return queryset
 
 
-class BlogPostAPIListView(mixins.CreateModelMixin,generics.ListAPIView):  #Detail view , create view , form view
+class BlogPostAPIListView(mixins.CreateModelMixin,generics.ListAPIView):  
 	lookup_field  = 'pk'  # we can use slug , id
 	serializer_class =  BlogPostSerializer
 	queryset      = BlogPost.objects.all()
@@ -36,11 +36,11 @@ class BlogPostAPIListView(mixins.CreateModelMixin,generics.ListAPIView):  #Detai
 		qs = BlogPost.objects.all()
 		query = self.request.GET("q")
 		if query is not None:
-			qs = qs.filter(Q(username__icontains=query)) #|Q(content__icontains=query)).distinct()
+			qs = qs.filter(Q(username__icontains=query)) #|Q(email__icontains=query)).distinct()
 		return qs	
 
 		
-class BlogPostRudView(generics.RetrieveUpdateDestroyAPIView):  #Detail view , create view , form view
+class BlogPostRudView(generics.RetrieveUpdateDestroyAPIView):  
 	lookup_field  = 'pk'  # we can use slug , id
 	serializer_class =  BlogPostSerializer
 	queryset      = BlogPost.objects.all()
