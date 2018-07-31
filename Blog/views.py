@@ -5,10 +5,10 @@ from datetime import date
 
 
 def report_list_view(request):
-	today   = date.today()
-	year    = BlogPost.objects.filter(timestamp__year=today.year).count()
-	month   = BlogPost.objects.filter(timestamp__month=today.month).count()
-	today1  = BlogPost.objects.filter(timestamp__day=today.day).count()
+	today   = Userdate.today()
+	year    = UserPost.objects.filter(timestamp__year=today.year).count()
+	month   = UserPost.objects.filter(timestamp__month=today.month).count()
+	today1  = UserPost.objects.filter(timestamp__day=today.day).count()
 	context = {
 	'month' : month,
 	'year'  : year ,
