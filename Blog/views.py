@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import BlogPost
+from .models import UserPost
 from django.utils.timezone import datetime
 from datetime import date
 
