@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class BlogPost(models.Model):
+class UserPost(models.Model):
 	username  = models.CharField(max_length=120, unique=True)
 	email     = models.EmailField(unique=True)
 	image     = models.ImageField(null=True)
