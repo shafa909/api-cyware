@@ -10,5 +10,5 @@ class BlogPostSerializer(serializers.ModelSerializer):  #
 				'username',
 				'email',
 				'timestamp',	
-		        'image',
+		       		'image',
 		          ]
