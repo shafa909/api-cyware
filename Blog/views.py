@@ -4,7 +4,7 @@ from django.utils.timezone import datetime
 from datetime import date
 
 
-def product_list_view(request):
+def report_list_view(request):
 	today   = date.today()
 	year    = BlogPost.objects.filter(timestamp__year=today.year).count()
 	month   = BlogPost.objects.filter(timestamp__month=today.month).count()
