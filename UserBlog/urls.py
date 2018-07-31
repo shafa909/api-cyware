@@ -20,6 +20,6 @@ from Blog.views import product_list_view
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api/',include('Blog.api.urls',namespace='api-postings')),
-    url(r'^report/$', product_list_view),
+    url(r'^report/$',report_list_view),
 
 ]
